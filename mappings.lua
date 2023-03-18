@@ -21,11 +21,11 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- disable <leader>b mappings
-    ["<leader>b"] = false,
-    ["<leader>bb"] = false,
-    ["<leader>bd"] = false,
-    ["<leader>b\\"] = false,
-    ["<leader>b|"] = false,
+    -- ["<leader>b"] = false,
+    -- ["<leader>bb"] = false,
+    -- ["<leader>bd"] = false,
+    -- ["<leader>b\\"] = false,
+    -- ["<leader>b|"] = false,
     ["<leader>c"] = {
       function()
         local bufs = vim.fn.getbufinfo { buflisted = true }
