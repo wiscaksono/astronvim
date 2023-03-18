@@ -1,6 +1,6 @@
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.completion.copilot-lua" },
   {
     -- further customize the options set by the community

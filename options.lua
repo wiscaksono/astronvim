@@ -8,7 +8,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     -- showtabline = 0,
-    laststatus = 2, -- always show status line
+    laststatus = 3, -- always show status line
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -20,12 +20,3 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
   },
 }
--- If you need more control, you can use the function()...end notation
--- return function(local_vim)
---   local_vim.opt.relativenumber = true
---   local_vim.g.mapleader = " "
---   local_vim.opt.whichwrap = vim.opt.whichwrap - { 'b', 's' } -- removing option from list
---   local_vim.opt.shortmess = vim.opt.shortmess + { I = true } -- add to option list
---
---   return local_vim
--- end
