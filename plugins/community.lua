@@ -1,6 +1,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.completion.copilot-lua" },
   {
     -- further customize the options set by the community
