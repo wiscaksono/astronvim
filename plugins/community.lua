@@ -2,6 +2,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.completion.copilot-lua" },
   {

@@ -16,6 +16,50 @@ return {
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
     },
   },
+  icons = {
+    ActiveLSP = "",
+    ActiveTS = " ",
+    BufferClose = "",
+    DapBreakpoint = "",
+    DapBreakpointCondition = "",
+    DapBreakpointRejected = "",
+    DapLogPoint = "",
+    DapStopped = "",
+    DefaultFile = "",
+    Diagnostic = "",
+    DiagnosticError = "",
+    DiagnosticHint = "",
+    DiagnosticInfo = "",
+    DiagnosticWarn = "",
+    Ellipsis = "",
+    FileModified = "",
+    FileReadOnly = "",
+    FoldClosed = "",
+    FoldOpened = "",
+    FolderClosed = "",
+    FolderEmpty = "",
+    FolderOpen = "",
+    Git = "",
+    GitAdd = "",
+    GitBranch = "",
+    GitChange = "",
+    GitConflict = "",
+    GitDelete = "",
+    GitIgnored = "",
+    GitRenamed = "",
+    GitStaged = "",
+    GitUnstaged = "",
+    GitUntracked = "",
+    LSPLoaded = "",
+    LSPLoading1 = "",
+    LSPLoading2 = "",
+    LSPLoading3 = "",
+    MacroRecording = "",
+    Paste = "",
+    Search = "",
+    Selected = "",
+    TabClose = "",
+  },
   -- Set colorscheme to use
   colorscheme = "astrodark",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -63,36 +107,22 @@ return {
   },
   plugins = {
     {
-      "goolord/alpha-nvim",
+      "onsails/lspkind.nvim",
       opts = function(_, opts)
-        -- customize the dashboard header
-        opts.section.header.val = {
-          " ▄████▄   ▒█████  ▓█████▄ ▓█████  ██▀███   ██▒   █▓ ██▓ ███▄ ▄███▓",
-          "▒██▀ ▀█  ▒██▒  ██▒▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒",
-          "▒▓█    ▄ ▒██░  ██▒░██   █▌▒███   ▓██ ░▄█ ▒ ▓██  █▒░▒██▒▓██    ▓██░",
-          "▒▓▓▄ ▄██▒▒██   ██░░▓█▄   ▌▒▓█  ▄ ▒██▀▀█▄    ▒██ █░░░██░▒██    ▒██ ",
-          "▒ ▓███▀ ░░ ████▓▒░░▒████▓ ░▒████▒░██▓ ▒██▒   ▒▀█░  ░██░▒██▒   ░██▒",
-          "░ ░▒ ▒  ░░ ▒░▒░▒░  ▒▒▓  ▒ ░░ ▒░ ░░ ▒▓ ░▒▓░   ░ ▐░  ░▓  ░ ▒░   ░  ░ ",
-          "  ░  ▒     ░ ▒ ▒░  ░ ▒  ▒  ░ ░  ░  ░▒ ░ ▒░   ░ ░░   ▒ ░░  ░      ░",
-          "░        ░ ░ ░ ▒   ░ ░  ░    ░     ░░   ░      ░░   ▒ ░░      ░   ",
-          "░ ░          ░ ░     ░       ░  ░   ░           ░   ░         ░   ",
-          "░                  ░                           ░                  ",
+        -- use codicons preset
+        opts.preset = "codicons"
+        -- set some missing symbol types
+        opts.symbol_map = {
+          Array = "",
+          Boolean = "",
+          Key = "",
+          Namespace = "",
+          Null = "",
+          Number = "",
+          Object = "",
+          Package = "",
+          String = "",
         }
-        local button = require("astronvim.utils").alpha_button
-        -- add a button to update plugins
-
-        opts.section.buttons.val = {
-          button("LDR n", "  New File  "),
-          button("LDR f f", "  Find File  "),
-          button("LDR f o", "  Recents  "),
-          button("LDR T p", "  Projects  "),
-          button("LDR v c", "  Edit Config  "),
-          button("LDR S l", "  Last Session  "),
-          button("LDR v u", "  Update  "),
-
-          button("LDR q", "  Quit Neovim"),
-        }
-
         return opts
       end,
     },
