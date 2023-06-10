@@ -3,6 +3,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.completion.copilot-lua" },
   {
