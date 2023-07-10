@@ -3,14 +3,14 @@ return {
   { import = "astrocommunity.utility.transparent-nvim", enabled = true },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
-  -- { import = "astrocommunity.pack.go" },
-  -- { import = "astrocommunity.pack.vue" },
-  -- { import = "astrocommunity.pack.astro" },
-  -- { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.astro" },
+  { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.completion.copilot-lua" },
   {
-    -- further customize the options set by the community
     "copilot.lua",
     opts = {
       suggestion = {
