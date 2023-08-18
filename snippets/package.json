@@ -1,0 +1,26 @@
+{
+  "name": "user-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./es7-react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./es7-react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./es7-react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./es7-react.json"
+      }
+    ]
+  }
+}
