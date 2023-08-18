@@ -15,6 +15,16 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<leader>c"] = {
+      function()
+        require("astronvim.utils.buffer").close()
+        local bufs = vim.fn.getbufinfo { buflisted = true }
+        if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then
+          require("alpha").start(false, require("alpha").default_config)
+        end
+      end,
+      desc = "Close buffer",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
