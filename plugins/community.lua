@@ -6,7 +6,11 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.utility.transparent-nvim", enabled = true },
+  { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
   {
