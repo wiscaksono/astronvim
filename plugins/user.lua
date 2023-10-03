@@ -1,4 +1,5 @@
 return {
+  { "typicode/bg.nvim", lazy = false },
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- {
