@@ -20,6 +20,14 @@
       {
         "language": "typescriptreact",
         "path": "./es7-react.json"
+      },
+      {
+        "languange": "blade",
+        "path": "./laravel-blade.json"
+      },
+      {
+        "languange": "php",
+        "path": "./laravel-blade.json"
       }
     ]
   }
