@@ -6,14 +6,11 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.prisma" },
-  { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.color.transparent-nvim", enabled = true },
-  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
+  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
+  { import = "astrocommunity.editing-support.multicursors-nvim" },
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   {
     "presence.nvim",
     opts = {
