@@ -6,6 +6,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
