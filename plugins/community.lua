@@ -7,10 +7,11 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
-  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
-  { import = "astrocommunity.editing-support.multicursors-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   {
     "presence.nvim",
