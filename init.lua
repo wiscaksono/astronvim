@@ -53,6 +53,11 @@ return {
       clangd = {
         capabilities = { offsetEncoding = "utf-8" },
       },
+      emmet_ls = function(opts)
+        opts.filetypes = require("astronvim.utils").list_insert_unique(opts.filetypes, "php")
+
+        return opts
+      end,
     },
     -- enable servers that you already have installed without mason
     servers = {

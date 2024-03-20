@@ -10,8 +10,13 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.astro" },
+  { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
+  { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   {
     "presence.nvim",
