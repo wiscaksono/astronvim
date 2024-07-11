@@ -20,7 +20,6 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.svelte" },
-  { import = "astrocommunity.pack.java" },
   {
     "AstroNvim/astrolsp",
     opts = {
@@ -54,7 +53,6 @@ return {
   { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
-  -- { import = "astrocommunity.editing-support.conform-nvim" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.media.vim-wakatime" },
