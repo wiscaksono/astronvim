@@ -20,6 +20,8 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.sql" },
   {
     "AstroNvim/astrolsp",
     opts = {
@@ -32,11 +34,11 @@ return {
                   {
                     name = "JavaSE-21",
                     path = "/Users/wiscaksono/.sdkman/candidates/java/21.0.3-tem",
-                    default = true,
                   },
                   {
                     name = "JavaSE-17",
                     path = "/Users/wiscaksono/.sdkman/candidates/java/17.0.11-tem",
+                    default = true,
                   },
                   {
                     name = "JavaSE-11",
@@ -54,6 +56,7 @@ return {
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
