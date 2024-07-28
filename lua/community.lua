@@ -21,7 +21,7 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.zig" },
-  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.markdown" },
   {
     "AstroNvim/astrolsp",
     opts = {
@@ -60,4 +60,5 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
 }
