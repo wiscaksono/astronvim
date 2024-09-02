@@ -7,6 +7,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  -- PACK
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.go" },
@@ -14,7 +15,6 @@ return {
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.templ" },
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.prisma" },
@@ -22,6 +22,24 @@ return {
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.mdx" },
+  { import = "astrocommunity.pack.php" },
+  -- COLORSCHEME
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  { import = "astrocommunity.colorscheme.oldworld-nvim" },
+  { import = "astrocommunity.colorscheme.lackluster-nvim" },
+  -- EDITING SUPPORT
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
+  -- MISC
+  { import = "astrocommunity.programming-language-support.rest-nvim" },
+  { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.media.vim-wakatime" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.recipes.auto-session-restore" },
+  { import = "astrocommunity.git.diffview-nvim" },
   {
     "AstroNvim/astrolsp",
     opts = {
@@ -52,13 +70,4 @@ return {
       },
     },
   },
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
-  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
-  { import = "astrocommunity.colorscheme.oldworld-nvim" },
-  { import = "astrocommunity.editing-support.zen-mode-nvim" },
-  { import = "astrocommunity.editing-support.vim-visual-multi" },
-  { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.media.vim-wakatime" },
-  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
-  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
 }
