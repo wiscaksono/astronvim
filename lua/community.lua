@@ -24,50 +24,47 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.mdx" },
   { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.python" },
   -- COLORSCHEME
-  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
-  { import = "astrocommunity.colorscheme.lackluster-nvim" },
   -- EDITING SUPPORT
-  { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
+  -- LSP
+  { import = "astrocommunity.lsp.nvim-java" },
+  { import = "astrocommunity.lsp.actions-preview-nvim" },
+  -- { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   -- MISC
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.media.vim-wakatime" },
-  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
-  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.recipes.auto-session-restore" },
-  { import = "astrocommunity.git.diffview-nvim" },
-  {
-    "AstroNvim/astrolsp",
-    opts = {
-      config = {
-        jdtls = {
-          settings = {
-            java = {
-              configuration = {
-                runtimes = {
-                  {
-                    name = "JavaSE-21",
-                    path = "/Users/wiscaksono/.sdkman/candidates/java/21.0.3-tem",
-                  },
-                  {
-                    name = "JavaSE-17",
-                    path = "/Users/wiscaksono/.sdkman/candidates/java/17.0.11-tem",
-                    default = true,
-                  },
-                  {
-                    name = "JavaSE-11",
-                    path = "/Users/wiscaksono/.sdkman/candidates/java/11.0.23-tem",
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
+  -- {
+  --   "AstroNvim/astrolsp",
+  --   opts = {
+  --     config = {
+  --       jdtls = {
+  --         settings = {
+  --           java = {
+  --             configuration = {
+  --               runtimes = {
+  --                 {
+  --                   name = "JavaSE-21",
+  --                   path = "/Users/wiscaksono/.sdkman/candidates/java/21.0.3-tem",
+  --                 },
+  --                 {
+  --                   name = "JavaSE-17",
+  --                   path = "/Users/wiscaksono/.sdkman/candidates/java/17.0.11-tem",
+  --                   default = true,
+  --                 },
+  --                 {
+  --                   name = "JavaSE-11",
+  --                   path = "/Users/wiscaksono/.sdkman/candidates/java/11.0.23-tem",
+  --                 },
+  --               },
+  --             },
+  --           },
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
 }
