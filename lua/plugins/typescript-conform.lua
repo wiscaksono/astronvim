@@ -1,5 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 local function biome_lsp_or_prettier(bufnr)
   local has_biome_lsp = vim.lsp.get_clients({
     bufnr = bufnr,
@@ -21,28 +19,6 @@ local function biome_lsp_or_prettier(bufnr)
   if has_prettier then return { "prettier", "prettierd" } end
   return { "biome" }
 end
-
--- return {
---   "stevearc/conform.nvim",
---   opts = function(_, opts)
---     if not opts.formatters_by_ft then opts.formatters_by_ft = {} end
---     opts.log_level = vim.log.levels.INFO
---
---     opts.formatters_by_ft.typescript = biome_lsp_or_prettier
---     opts.formatters_by_ft.javascript = biome_lsp_or_prettier
---     opts.formatters_by_ft.javascriptreact = biome_lsp_or_prettier
---     opts.formatters_by_ft.typescriptreact = biome_lsp_or_prettier
---     opts.formatters_by_ft.json = { "biome" }
---     opts.formatters_by_ft.jsonc = { "biome" }
---     opts.formatters_by_ft.markdown = { "biome" }
---     opts.formatters_by_ft.toml = { "biome" }
---     --
---     -- opts.formatters_by_ft.typescript = { "prettierd", "prettier" }
---     -- opts.formatters_by_ft.javascript = { "prettierd", "prettier" }
---     -- opts.formatters_by_ft.javascriptreact = { "prettierd", "prettier" }
---     -- opts.formatters_by_ft.typescriptreact = { "prettierd", "prettier" }
---   end,
--- }
 
 return {
   "stevearc/conform.nvim",
