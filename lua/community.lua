@@ -33,8 +33,8 @@ return {
   { import = "astrocommunity.lsp.nvim-java" },
   { import = "astrocommunity.lsp.actions-preview-nvim" },
   -- MISC
-  { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.avante-nvim" },
-  { import = "astrocommunity.media.vim-wakatime" },
+  -- { import = "astrocommunity.media.vim-wakatime" },
   -- { import = "astrocommunity.recipes.auto-session-restore" },
 }
