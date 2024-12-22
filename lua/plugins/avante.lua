@@ -1,8 +1,11 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
+local prefix = "<Leader>A"
 return {
   "yetone/avante.nvim",
-  build = ":AvanteBuild",
+  build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+    or "make",
+  event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   cmd = {
     "AvanteAsk",
     "AvanteBuild",
@@ -17,28 +20,34 @@ return {
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
-    {
-      "AstroNvim/astrocore",
-      opts = function(_, opts)
-        local maps = assert(opts.mappings)
-        local prefix = "<Leader>a"
-
-        maps.n[prefix] = { desc = "Avante functionalities" }
-
-        maps.n[prefix .. "a"] = { function() require("avante.api").ask() end, desc = "Avante ask" }
-        maps.v[prefix .. "a"] = { function() require("avante.api").ask() end, desc = "Avante ask" }
-
-        maps.v[prefix .. "r"] = { function() require("avante.api").refresh() end, desc = "Avante refresh" }
-
-        maps.n[prefix .. "e"] = { function() require("avante.api").edit() end, desc = "Avante edit" }
-        maps.v[prefix .. "e"] = { function() require("avante.api").edit() end, desc = "Avante edit" }
-
-        -- the following key bindings do not have an official api implementation
-      end,
-    },
+    { "AstroNvim/astrocore", opts = function(_, opts) opts.mappings.n[prefix] = { desc = " Avante" } end },
   },
-  opts = {},
+  opts = {
+    mappings = {
+      ask = prefix .. "<CR>",
+      edit = prefix .. "e",
+      refresh = prefix .. "r",
+      focus = prefix .. "f",
+      toggle = {
+        default = prefix .. "t",
+        debug = prefix .. "d",
+        hint = prefix .. "h",
+        suggestion = prefix .. "s",
+        repomap = prefix .. "R",
+      },
+      diff = {
+        next = "]c",
+        prev = "[c",
+      },
+      files = {
+        add_current = prefix .. ".",
+      },
+    },
+    provider = "openai", -- Recommend using Claude
+    auto_suggestions_provider = "openai", -- Since auto-suggestions are a high-frequency operation and therefore expensive, it is recommended to specify an inexpensive provider or even a free provider: copilot
+  },
   specs = { -- configure optional plugins
+    { "AstroNvim/astroui", opts = { icons = { Avante = "" } } },
     { -- if copilot.lua is available, default to copilot provider
       "zbirenbaum/copilot.lua",
       optional = true,
@@ -47,6 +56,7 @@ return {
           "yetone/avante.nvim",
           opts = {
             provider = "copilot",
+            auto_suggestions_provider = "copilot",
           },
         },
       },

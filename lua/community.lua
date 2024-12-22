@@ -14,8 +14,8 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   -- { import = "astrocommunity.pack.astro" },
   -- { import = "astrocommunity.pack.templ" },
-  { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.elixir-phoenix" },
+  -- { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.elixir-phoenix" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.prisma" },
   -- { import = "astrocommunity.pack.bash" },
@@ -29,12 +29,15 @@ return {
   -- { import = "astrocommunity.pack.python" },
   -- COLORSCHEME
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.vim-visual-multi" },
-  -- LSP
-  { import = "astrocommunity.lsp.nvim-java" },
   -- MISC
   -- { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
-  -- { import = "astrocommunity.recipes.auto-session-restore" },
+  { import = "astrocommunity.media.pets-nvim" },
+  { import = "astrocommunity.programming-language-support.rest-nvim" },
+  { import = "astrocommunity.editing-support.bigfile-nvim" },
 }
