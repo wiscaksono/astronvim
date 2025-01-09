@@ -154,16 +154,16 @@ return {
       end
     end,
   },
-  -- {
-  --   "stevearc/conform.nvim",
-  --   optional = true,
-  --   opts = function(_, opts)
-  --     if not opts.formatters_by_ft then opts.formatters_by_ft = {} end
-  --     for _, filetype in ipairs(format_filetypes) do
-  --       opts.formatters_by_ft[filetype] = conform_formatter
-  --     end
-  --   end,
-  -- },
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = function(_, opts)
+      if not opts.formatters_by_ft then opts.formatters_by_ft = {} end
+      for _, filetype in ipairs(format_filetypes) do
+        opts.formatters_by_ft[filetype] = conform_formatter
+      end
+    end,
+  },
   {
     "jay-babu/mason-nvim-dap.nvim",
     optional = true,
