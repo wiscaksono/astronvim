@@ -37,23 +37,27 @@ return {
       tooltip = "💤", -- Text to display when hovering over the idle image
     },
     text = {
-      viewing = "Viewing {}", -- Text to display when viewing a readonly file
-      editing = "Editing {}", -- Text to display when editing a file
-      file_browser = "Browsing files in {}", -- Text to display when browsing files (Empty string to disable)
-      plugin_manager = "Managing plugins in {}", -- Text to display when managing plugins (Empty string to disable)
-      lsp_manager = "Configuring LSP in {}", -- Text to display when managing LSP servers (Empty string to disable)
-      vcs = "Committing changes in {}", -- Text to display when using Git or Git-related plugin (Empty string to disable)
-      workspace = "In {}", -- Text to display when in a workspace (Empty string to disable)
+      workspace = function(opts) return "In " .. opts.workspace end,
+      viewing = function(opts) return "Viewing " .. opts.filename end,
+      editing = function(opts) return "Editing " .. opts.filename end,
+      file_browser = function(opts) return "Browsing files in " .. opts.name end,
+      plugin_manager = function(opts) return "Managing plugins in " .. opts.name end,
+      lsp = function(opts) return "Configuring LSP in " .. opts.name end,
+      docs = function(opts) return "Reading " .. opts.name end,
+      vcs = function(opts) return "Committing changes in " .. opts.name end,
+      notes = function(opts) return "Taking notes in " .. opts.name end,
+      debug = function(opts) return "Debugging in " .. opts.name end,
+      test = function(opts) return "Testing in " .. opts.name end,
+      diagnostics = function(opts) return "Fixing problems in " .. opts.name end,
+      games = function(opts) return "Playing " .. opts.name end,
+      terminal = function(opts) return "Running commands in " .. opts.name end,
+      dashboard = "Home",
     },
     buttons = {
       {
         label = "View Repository", -- Text displayed on the button
         url = "https://youtu.be/dQw4w9WgXcQ?si=hHKS2KdpoGCjg61f", -- URL where the button leads to ('git' = automatically fetch Git repository URL)
       },
-      -- {
-      --   label = 'View Plugin',
-      --   url = 'https://github.com/vyfor/cord.nvim',
-      -- }
     },
   },
 }
