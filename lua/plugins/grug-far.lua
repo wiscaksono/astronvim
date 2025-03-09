@@ -1,17 +1,35 @@
 local default_opts = { instanceName = "main" }
 
-local function grug_far_open(opts, with_visual)
-  print(opts.instanceName)
+-- Opens a Grug Far instance.
+--
+-- @param user_opts table: User-provided options (optional).
+-- @param with_visual boolean: Whether to use the current visual selection (optional).
+local function grug_far_open(user_opts, with_visual)
   local grug_far = require "grug-far"
-  opts = require("astrocore").extend_tbl(default_opts, opts)
+
+  -- Merge user options with default options.
+  local opts = require("astrocore").extend_tbl(default_opts, user_opts or {})
+
   if not grug_far.has_instance(opts.instanceName) then
-    grug_far.open(opts)
+    -- Instance doesn't exist, so open a new one.
+    local ok, err = grug_far.open(opts)
+    if not ok then
+      vim.notify("Failed to open Grug Far instance: " .. err, vim.log.levels.ERROR, { title = "Grug-far" })
+      return
+    end
   else
+    -- Instance already exists, so open it.
     if with_visual then
       if not opts.prefills then opts.prefills = {} end
       opts.prefills.search = grug_far.get_current_visual_selection()
     end
-    grug_far.open_instance(opts.instanceName)
+
+    local ok, err = grug_far.open_instance(opts.instanceName)
+    if not ok then
+      vim.notify("Failed to open Grug Far instance: " .. err, vim.log.levels.ERROR, { title = "Grug-far" })
+      return
+    end
+
     if opts.prefills then grug_far.update_instance_prefills(opts.instanceName, opts.prefills, false) end
   end
 end

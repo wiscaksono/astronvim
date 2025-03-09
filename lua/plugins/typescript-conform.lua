@@ -1,9 +1,20 @@
 local function biome_lsp_or_prettier(bufnr)
+  -- This function determines whether to use Biome LSP or Prettier for formatting.
+  -- It prioritizes Biome LSP if it's available. Otherwise, it checks for Prettier
+  -- configuration files and uses Prettier if found.
+
+  -- Check if Biome LSP is attached to the buffer.
   local has_biome_lsp = vim.lsp.get_clients({
     bufnr = bufnr,
     name = "biome",
   })[1]
-  if has_biome_lsp then return {} end
+
+  if has_biome_lsp then
+    -- Biome LSP is available, so use it.
+    return {} -- Return an empty table to use the LSP's formatting capabilities.
+  end
+
+  -- Biome LSP is not available, so check for Prettier configuration files.
   local has_prettier = vim.fs.find({
     ".prettierrc",
     ".prettierrc.json",
@@ -16,7 +27,13 @@ local function biome_lsp_or_prettier(bufnr)
     "prettier.config.js",
     "prettier.config.cjs",
   }, { upward = true })[1]
-  if has_prettier then return { "prettier", "prettierd" } end
+
+  if has_prettier then
+    -- Prettier configuration files were found, so use Prettier.
+    return { "prettier", "prettierd" }
+  end
+
+  -- Neither Biome LSP nor Prettier is available, so use Biome CLI.
   return { "biome" }
 end
 
@@ -56,6 +73,8 @@ return {
             ["<Leader>lf"] = { function() vim.cmd.Format() end, desc = "Format buffer" },
             ["<Leader>uf"] = {
               function()
+                -- Toggle autoformatting for the current buffer.
+                -- If vim.b.autoformat is nil, use the global setting (vim.g.autoformat).
                 if vim.b.autoformat == nil then
                   if vim.g.autoformat == nil then vim.g.autoformat = true end
                   vim.b.autoformat = vim.g.autoformat
@@ -69,6 +88,9 @@ return {
             },
             ["<Leader>uF"] = {
               function()
+                -- Toggle autoformatting globally.
+                -- This also resets the buffer-local setting to nil, so that new buffers
+                -- will use the global setting.
                 if vim.g.autoformat == nil then vim.g.autoformat = true end
                 vim.g.autoformat = not vim.g.autoformat
                 vim.b.autoformat = nil
@@ -85,6 +107,8 @@ return {
   },
   opts = {
     format_on_save = function(bufnr)
+      -- This function determines whether to format the buffer on save.
+      -- It checks both the global (vim.g.autoformat) and buffer-local (vim.b[bufnr].autoformat) settings.
       if vim.g.autoformat == nil then vim.g.autoformat = true end
       local autoformat = vim.b[bufnr].autoformat
       if autoformat == nil then autoformat = vim.g.autoformat end

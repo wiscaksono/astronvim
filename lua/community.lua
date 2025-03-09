@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.pack.python" },
   -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.laravel" },
+  { import = "astrocommunity.pack.templ" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.swift" },
   { import = "astrocommunity.lsp.nvim-java" },

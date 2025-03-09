@@ -13,11 +13,11 @@ return {
     -- colorscheme = "oldworld",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
-      init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
+      init = { -- This table overrides highlights in all themes
+        -- Normal = { bg = "#000000" }, -- Example: Set the default background to black
       },
-      astrodark = { -- a table of overrides/changes when applying the astrotheme theme
-        -- Normal = { bg = "#000000" },
+      astrodark = { -- A table of overrides/changes when applying the astrotheme theme
+        -- Normal = { bg = "#000000" }, -- Example: Set the background to black for the astrodark theme
       },
     },
     -- Icons can be configured throughout the interface
