@@ -56,14 +56,14 @@ return {
         },
         ["<Leader>b"] = { desc = "Buffers" },
         ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
-        ["<Leader>c"] = {
-          function()
-            local bufs = vim.fn.getbufinfo { buflisted = true }
-            require("astrocore.buffer").close(0)
-            if require("astrocore").is_available "alpha-nvim" and not bufs[2] then require("alpha").start() end
-          end,
-          desc = "Close current buffer", -- Improved description
-        },
+        -- ["<Leader>c"] = {
+        --   function()
+        --     local bufs = vim.fn.getbufinfo { buflisted = 1 }
+        --     require("astrocore.buffer").close(0)
+        --     if not bufs[2] then require("snacks").dashboard() end
+        --   end,
+        --   desc = "Close buffer",
+        -- },
       },
       t = {
         -- Setting a mapping to false will disable it

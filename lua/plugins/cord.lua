@@ -1,10 +1,11 @@
 return {
   "vyfor/cord.nvim",
-  build = "./build || .\\build",
+  version = "^2",
+  build = ":Cord update",
   event = "VeryLazy",
   opts = {
     usercmds = true, -- Enable user commands
-    log_level = "error", -- One of 'trace', 'debug', 'info', 'warn', 'error', 'off'
+    log_level = "off", -- One of 'trace', 'debug', 'info', 'warn', 'error', 'off'
     timer = {
       interval = 1500, -- Interval between presence updates in milliseconds (min 500)
       reset_on_idle = false, -- Reset start timestamp on idle
@@ -16,8 +17,8 @@ return {
       tooltip = "VSCode Suck!", -- Text to display when hovering over the editor's image
     },
     display = {
-      show_time = true, -- Display start timestamp
-      show_repository = true, -- Display 'View repository' button linked to repository url, if any
+      show_time = false, -- Display start timestamp
+      show_repository = false, -- Display 'View repository' button linked to repository url, if any
       show_cursor_position = false, -- Display line and column number of cursor's position
       swap_fields = false, -- If enabled, workspace is displayed first
       swap_icons = false, -- If enabled, editor is displayed on the main image
@@ -35,6 +36,9 @@ return {
       disable_on_focus = false, -- Do not display idle status when neovim is focused
       text = "Idle", -- Text to display when idle
       tooltip = "💤", -- Text to display when hovering over the idle image
+    },
+    hooks = {
+      ready = nil,
     },
     text = {
       workspace = function(opts) return "In " .. opts.workspace end,
@@ -55,7 +59,7 @@ return {
     },
     buttons = {
       {
-        label = "View Repository", -- Text displayed on the button
+        label = "Don't click this", -- Text displayed on the button
         url = "https://youtu.be/dQw4w9WgXcQ?si=hHKS2KdpoGCjg61f", -- URL where the button leads to ('git' = automatically fetch Git repository URL)
       },
     },
