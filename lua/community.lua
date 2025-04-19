@@ -8,7 +8,6 @@ return {
   -- PACK
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.go" },
-  -- { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.json" },
@@ -18,18 +17,19 @@ return {
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python" },
-  -- { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.templ" },
-  -- { import = "astrocommunity.pack.java" },
-  -- { import = "astrocommunity.lsp.nvim-java" },
   { import = "astrocommunity.pack.swift" },
+  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.lsp.nvim-java" },
   -- COLORSCHEME
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.vim-visual-multi" },
-  -- { import = "astrocommunity.editing-support.conform-nvim" },
+  { import = "astrocommunity.editing-support.conform-nvim" },
   -- MISC
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
@@ -39,4 +39,5 @@ return {
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.fuzzy-finder.fzf-lua" },
+  { import = "astrocommunity.comment.ts-comments-nvim" },
 }

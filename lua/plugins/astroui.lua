@@ -13,7 +13,11 @@ return {
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- This table overrides highlights in all themes
-        -- Normal = { bg = "#000000" }, -- Example: Set the default background to black
+        Normal = { bg = "#1E1E2E" }, -- Example: Set the default background to black
+        NeoTreeNormal = { bg = "#1E1E2E" }, -- <-- Sidebar background color
+        NeoTreeNormalNC = { bg = "#1E1E2E" }, -- <-- Non-current sidebar
+        NeoTreeEndOfBuffer = { bg = "#1E1E2E" }, -- <-- End of buffer color
+        NeoTreeWinSeparator = { fg = "#181825", bg = "#1E1E2E" },
       },
       astrodark = { -- A table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" }, -- Example: Set the background to black for the astrodark theme
