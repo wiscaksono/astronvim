@@ -18,26 +18,23 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.laravel" },
-  { import = "astrocommunity.pack.templ" },
-  { import = "astrocommunity.pack.swift" },
-  { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.java" },
-  { import = "astrocommunity.lsp.nvim-java" },
+  { import = "astrocommunity.pack.swift" },
+  { import = "astrocommunity.pack.kotlin" },
+  -- { import = "astrocommunity.lsp.nvim-java" },
   -- COLORSCHEME
   { import = "astrocommunity.colorscheme.oldworld-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.conform-nvim" },
-  -- MISC
-  -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-  { import = "astrocommunity.media.vim-wakatime" },
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
-  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
+  -- RECIPES
+  -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
-  { import = "astrocommunity.search.grug-far-nvim" },
+  { import = "astrocommunity.recipes.vscode" },
+  { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
+  { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  -- MISC
+  { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.motion.nvim-surround" },
-  { import = "astrocommunity.fuzzy-finder.fzf-lua" },
-  { import = "astrocommunity.comment.ts-comments-nvim" },
 }
