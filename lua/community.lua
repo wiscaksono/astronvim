@@ -37,4 +37,5 @@ return {
   -- MISC
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.utility.hover-nvim" },
 }
