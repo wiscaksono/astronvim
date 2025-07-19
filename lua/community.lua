@@ -23,6 +23,7 @@ return {
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.ruby" },
   -- { import = "astrocommunity.lsp.nvim-java" },
   -- COLORSCHEME
   { import = "astrocommunity.colorscheme.catppuccin" },
