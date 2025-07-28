@@ -9,7 +9,7 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "catppuccin-mocha",
+    colorscheme = "carbonfox",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- This table overrides highlights in all themes
@@ -63,6 +63,8 @@ return {
         TabLine = { bg = "none" },
         TabLineSel = { bg = "none" },
         TabLineFill = { bg = "none" },
+
+        StatusLine = { bg = "none", fg = "none" },
       },
       astrodark = { -- A table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" }, -- Example: Set the background to black for the astrodark theme

@@ -27,16 +27,16 @@ return {
   -- { import = "astrocommunity.lsp.nvim-java" },
   -- COLORSCHEME
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.conform-nvim" },
   -- RECIPES
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
-  { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
+  -- { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   -- MISC
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.motion.nvim-surround" },
-  { import = "astrocommunity.utility.hover-nvim" },
 }
