@@ -24,9 +24,9 @@ return {
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.ruby" },
-  -- { import = "astrocommunity.lsp.nvim-java" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.lsp.nvim-java" },
   -- COLORSCHEME
-  { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.vim-visual-multi" },
