@@ -7,7 +7,7 @@ return {
     usercmds = true, -- Enable user commands
     log_level = "off", -- One of 'trace', 'debug', 'info', 'warn', 'error', 'off'
     timer = {
-      interval = 1500, -- Interval between presence updates in milliseconds (min 500)
+      interval = 5000, -- Interval between presence updates in milliseconds (min 500)
       reset_on_idle = false, -- Reset start timestamp on idle
       reset_on_change = false, -- Reset start timestamp on presence change
     },
@@ -32,7 +32,7 @@ return {
     idle = {
       enable = false, -- Enable idle status
       show_status = false, -- Display idle status, disable to hide the rich presence on idle
-      timeout = 300000, -- Timeout in milliseconds after which the idle status is set, 0 to display immediately
+      timeout = 60000, -- Timeout in milliseconds after which the idle status is set, 0 to display immediately
       disable_on_focus = false, -- Do not display idle status when neovim is focused
       text = "Idle", -- Text to display when idle
       tooltip = "💤", -- Text to display when hovering over the idle image
