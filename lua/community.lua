@@ -16,7 +16,7 @@ return {
   { import = "astrocommunity.pack.svelte" },
   -- { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.java" },
   -- { import = "astrocommunity.pack.swift" },
