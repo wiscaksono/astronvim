@@ -28,7 +28,7 @@ return {
   -- { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.lsp.nvim-java" },
   -- COLORSCHEME
-  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  { import = "astrocommunity.colorscheme.github-nvim-theme" },
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.conform-nvim" },

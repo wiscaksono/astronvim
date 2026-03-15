@@ -8,8 +8,13 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    -- change colorscheme
-    colorscheme = "nightfox",
+    -- change colorscheme based on macOS system appearance
+    colorscheme = (function()
+      local handle = io.popen "defaults read -g AppleInterfaceStyle 2>/dev/null"
+      local result = handle and handle:read "*a" or ""
+      if handle then handle:close() end
+      return result:match "Dark" and "github_dark" or "github_light"
+    end)(),
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- This table overrides highlights in all themes
@@ -34,7 +39,7 @@ return {
         NeoTreeNormal = { bg = "none" },
         NeoTreeNormalNC = { bg = "none" },
         NeoTreeVertSplit = { bg = "none" },
-        NeoTreeWinSeparator = { bg = "none", fg = "none" },
+        NeoTreeWinSeparator = { bg = "none", fg = "#475258" },
         NeoTreeEndOfBuffer = { bg = "none" },
 
         -- transparent background for nvim-tree

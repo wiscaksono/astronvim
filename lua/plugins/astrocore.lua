@@ -10,6 +10,36 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
+    autocmds = {
+      bgwatch = {
+        {
+          event = "Signal",
+          pattern = "SIGWINCH",
+          callback = function()
+            if vim.g.bgwatch_running then return end
+            vim.defer_fn(function() vim.g.bgwatch_running = false end, 1000)
+            vim.g.bgwatch_running = true
+            vim.schedule(function()
+              local mode = require("astrocore").cmd({ "defaults", "read", "-g", "AppleInterfaceStyle" }, false)
+              local is_dark = mode and mode:match("Dark") ~= nil
+              vim.o.background = is_dark and "dark" or "light"
+              vim.cmd.colorscheme(is_dark and "github_dark" or "github_light")
+            end)
+          end,
+        },
+        {
+          event = "VimEnter",
+          callback = function()
+            vim.schedule(function()
+              local mode = require("astrocore").cmd({ "defaults", "read", "-g", "AppleInterfaceStyle" }, false)
+              local is_dark = mode and mode:match("Dark") ~= nil
+              vim.o.background = is_dark and "dark" or "light"
+              vim.cmd.colorscheme(is_dark and "github_dark" or "github_light")
+            end)
+          end,
+        },
+      },
+    },
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 256, lines = 5000 }, -- set global limits for large files for disabling features like treesitter
