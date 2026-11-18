@@ -19,6 +19,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.oxlint" },
   -- { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.swift" },
   -- { import = "astrocommunity.pack.kotlin" },
@@ -40,6 +41,5 @@ return {
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   -- MISC
-  { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.motion.nvim-surround" },
 }
